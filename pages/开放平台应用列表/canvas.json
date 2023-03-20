@@ -1,0 +1,590 @@
+{
+  "unpublishedPage": {
+    "name": "开放平台应用列表",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 710,
+          "containerStyle": "none",
+          "snapRows": 59,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 600,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "schema": "{\"form\":{\"labelCol\":6,\"wrapperCol\":12},\"schema\":{\"type\":\"object\",\"properties\":{\"appName\":{\"type\":\"string\",\"title\":\"应用名称\",\"x-decorator\":\"FormItem\",\"x-component\":\"Input\",\"x-validator\":[],\"x-component-props\":{},\"x-decorator-props\":{},\"name\":\"appName\",\"x-designable-id\":\"ipwsl1opl9u\",\"x-index\":0},\"mobile\":{\"type\":\"string\",\"title\":\"手机号\",\"x-decorator\":\"FormItem\",\"x-component\":\"Input\",\"x-validator\":[],\"x-component-props\":{\"placeholder\":\"\"},\"x-decorator-props\":{},\"name\":\"mobile\",\"x-designable-id\":\"1rcrv2iypkk\",\"x-index\":1},\"email\":{\"type\":\"string\",\"title\":\"邮箱\",\"x-decorator\":\"FormItem\",\"x-component\":\"Input\",\"x-validator\":[],\"x-component-props\":{\"placeholder\":\"接收应用公私钥\"},\"x-decorator-props\":{},\"name\":\"email\",\"x-designable-id\":\"ksniv48nbpv\",\"x-index\":2}},\"x-designable-id\":\"vyyd7s671il\"}}",
+              "widgetName": "FormAppCreate",
+              "isCanvas": false,
+              "displayName": "Formily表单",
+              "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
+              "searchTags": [
+                "form",
+                "submit"
+              ],
+              "topRow": 10,
+              "bottomRow": 14,
+              "parentRowSpace": 10,
+              "title": "创建应用",
+              "type": "FORMILY_WIDGET",
+              "triggerLabel": "创建应用",
+              "hideCard": false,
+              "parentColumnSpace": 12.46875,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onFormSubmit"
+                }
+              ],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [],
+              "resetLabel": "重置",
+              "showReset": true,
+              "key": "dcpdv1919l",
+              "submitLabel": "提交",
+              "onFormSubmit": "{{open_app_create.run(() => showAlert('创建应用成功','success'), () => showAlert('创建应用失败'))}}",
+              "formType": "MODAL",
+              "isDeprecated": false,
+              "rightColumn": 16,
+              "widgetId": "jjqwzoloub",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "multiRowSelection": true,
+              "borderColor": "#E0DEDE",
+              "isVisibleDownload": true,
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 15,
+              "isSortable": true,
+              "onPageChange": "{{open_app_list.run(() => {}, () => showAlert('查询数据异常'))}}",
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.app_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.appid.computedValue"
+                },
+                {
+                  "key": "primaryColumns.mobile.computedValue"
+                },
+                {
+                  "key": "primaryColumns.public_key.computedValue"
+                },
+                {
+                  "key": "primaryColumns.uid.computedValue"
+                },
+                {
+                  "key": "totalRecordsCount"
+                },
+                {
+                  "key": "primaryColumns.gmt_create.computedValue"
+                },
+                {
+                  "key": "primaryColumns.available_integral_balance.computedValue"
+                }
+              ],
+              "leftColumn": 1,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": "0",
+              "showInlineEditingOptionDropdown": true,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 1,
+              "totalRecordsCount": "{{open_app_list.data.data.total_count}}",
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "primaryColumnId": "app_name",
+              "defaultSelectedRowIndices": "[\n  0\n]",
+              "widgetName": "TableAppList",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "app_name",
+                "appid",
+                "uid",
+                "mobile",
+                "available_integral_balance",
+                "gmt_create",
+                "public_key"
+              ],
+              "dynamicPropertyPathList": [],
+              "displayName": "表格",
+              "searchTags": [
+                "datagrid",
+                "table"
+              ],
+              "bottomRow": 63,
+              "columnWidthMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "gmt_create": 162
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "onPageSizeChange": "{{open_app_list.run(() => {}, () => showAlert('查询数据异常'))}}",
+              "parentColumnSpace": 12.46875,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onPageChange"
+                },
+                {
+                  "key": "onPageSizeChange"
+                }
+              ],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "app_name": {
+                  "allowCellWrapping": false,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "app_name",
+                  "id": "app_name",
+                  "alias": "app_name",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "#52525b",
+                  "textSize": "1rem",
+                  "fontStyle": "BOLD",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "应用名称",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"app_name\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "appid": {
+                  "allowCellWrapping": false,
+                  "index": 1,
+                  "width": 150,
+                  "originalId": "appid",
+                  "id": "appid",
+                  "alias": "appid",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "#27272a",
+                  "textSize": "1rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "应用appid",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"appid\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "mobile": {
+                  "allowCellWrapping": false,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "mobile",
+                  "id": "mobile",
+                  "alias": "mobile",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "手机号",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobile\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "public_key": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "public_key",
+                  "id": "public_key",
+                  "alias": "public_key",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": false,
+                  "isDerived": false,
+                  "label": "public_key",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"public_key\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "uid": {
+                  "allowCellWrapping": false,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "uid",
+                  "id": "uid",
+                  "alias": "uid",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "用户id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"uid\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "gmt_create": {
+                  "allowCellWrapping": false,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "gmt_create",
+                  "id": "gmt_create",
+                  "alias": "gmt_create",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "date",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "创建时间",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gmt_create\"]))}}",
+                  "validation": {},
+                  "cellBackground": "",
+                  "inputFormat": "YYYY-MM-DDTHH:mm:ss",
+                  "outputFormat": "YYYY-MM-DD hh:mm:ss"
+                },
+                "available_integral_balance": {
+                  "allowCellWrapping": false,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "available_integral_balance",
+                  "id": "available_integral_balance",
+                  "alias": "available_integral_balance",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "可用积分",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableAppList.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"available_integral_balance\"]))}}",
+                  "validation": {},
+                  "cellBackground": ""
+                }
+              },
+              "key": "g7up00q88r",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "textSize": "0.875rem",
+              "widgetId": "wpfw6ydl6y",
+              "allowAddNewRow": false,
+              "tableData": "{{open_app_list.data.data.data}}",
+              "label": "数据",
+              "searchKey": "",
+              "parentId": "0",
+              "serverSidePaginationEnabled": true,
+              "renderMode": "CANVAS",
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "schema": "{\"form\":{\"labelCol\":6,\"wrapperCol\":12},\"schema\":{\"type\":\"object\",\"properties\":{\"receiveAmount\":{\"type\":\"string\",\"title\":\"赠送积分数\",\"x-decorator\":\"FormItem\",\"x-component\":\"Input\",\"x-validator\":\"number\",\"x-component-props\":{},\"x-decorator-props\":{\"style\":{\"backgroundColor\":\"rgba(255,255,255,1)\"}},\"name\":\"receiveAmount\",\"required\":true,\"x-designable-id\":\"ozz1vt8cjfo\",\"x-index\":0},\"activityName\":{\"type\":\"string\",\"title\":\"赠送活动名称\",\"x-decorator\":\"FormItem\",\"x-component\":\"Input\",\"x-validator\":[],\"x-component-props\":{},\"x-decorator-props\":{},\"name\":\"activityName\",\"x-designable-id\":\"d2sl0auqau0\",\"x-index\":1,\"required\":true}},\"x-designable-id\":\"k1xehqtzhfh\"}}",
+              "widgetName": "ButtonIntegralGive",
+              "isCanvas": false,
+              "displayName": "Formily表单",
+              "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
+              "searchTags": [
+                "form",
+                "submit"
+              ],
+              "topRow": 10,
+              "bottomRow": 15,
+              "parentRowSpace": 10,
+              "title": "表单标题",
+              "type": "FORMILY_WIDGET",
+              "triggerLabel": "赠送积分",
+              "hideCard": false,
+              "parentColumnSpace": 12.46875,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onFormSubmit"
+                }
+              ],
+              "leftColumn": 18,
+              "dynamicBindingPathList": [],
+              "resetLabel": "重置",
+              "showReset": true,
+              "key": "2eg1csbdwv",
+              "submitLabel": "提交",
+              "onFormSubmit": "{{integral_give_js.exec()}}",
+              "formType": "MODAL",
+              "isDeprecated": false,
+              "rightColumn": 32,
+              "widgetId": "em7d3ggxes",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "InputAppName",
+              "displayName": "输入框",
+              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+              "searchTags": [
+                "form",
+                "text input",
+                "number",
+                "textarea"
+              ],
+              "topRow": 1,
+              "bottomRow": 8,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "autoFocus": false,
+              "type": "INPUT_WIDGET_V2",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.46875,
+              "dynamicTriggerPathList": [],
+              "resetOnSubmit": true,
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "labelPosition": "Top",
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "isDisabled": false,
+              "key": "hl1xl7stx1",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 21,
+              "dynamicHeight": "FIXED",
+              "widgetId": "deyi7njnnn",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "label": "应用名称\n",
+              "version": 2,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "iconAlign": "left",
+              "defaultText": "",
+              "minDynamicHeight": 4
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "ButtonSearch",
+              "onClick": "{{open_app_list.run(() => {}, () => showAlert('查询列表异常'))}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "按钮",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit",
+                "button"
+              ],
+              "topRow": 4,
+              "bottomRow": 8,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.46875,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 22,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "查询",
+              "isDisabled": false,
+              "key": "t14viqc3zc",
+              "isDeprecated": false,
+              "rightColumn": 30,
+              "isDefaultClickDisabled": true,
+              "widgetId": "ud579l6tuq",
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "开放平台应用列表_open_app_list",
+              "name": "open_app_list",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "InputAppName.text",
+                "TableAppList.pageSize",
+                "TableAppList.pageOffset",
+                "appsmith.store.token"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "开放平台应用列表",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "640713974f063c195667ad59_6411dbee4f063c195667ae22"
+}

@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "now",
+    "pageId": "开放平台应用列表",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\texec: () => {\n\t\t var timestamp = Date.parse(new Date()) / 1000;\n\t\t console.log('timestamp='+timestamp);\n\t\t return timestamp;\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "开放平台应用列表_now",
+  "deleted": false,
+  "gitSyncId": "640713974f063c195667ad59_6413e4ad4f063c195667ae7e"
+}

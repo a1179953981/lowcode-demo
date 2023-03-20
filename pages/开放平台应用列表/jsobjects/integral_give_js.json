@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "integral_give_js",
+    "pageId": "开放平台应用列表",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\texec: () => {\n\t\tintegral_give.run(() => {\n\t    open_app_list.run();\n    }, () => {})\n\t\tshowAlert('赠送成功', 'success')\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "开放平台应用列表_integral_give_js",
+  "deleted": false,
+  "gitSyncId": "640713974f063c195667ad59_6413e8934f063c195667ae86"
+}
